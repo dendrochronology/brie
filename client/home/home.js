@@ -3,7 +3,6 @@ Template.home.rendered = function() {
 	if (data.ideas.length === 0) {
 		Template.home.show_new_form();
 	}
-	console.log(data.ideas);
 };
 
 Template.home.show_new_form = function() {
