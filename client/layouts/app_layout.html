@@ -1,0 +1,23 @@
+<template name="app_layout">
+<html>
+	<head>
+		<title>Big Red Idea</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-xs-12">{{yield}}</div>
+		</div>
+		{{#if currentUser}}
+		<div class="row global_footer">
+			<div class="col-xs-12">
+				<button id="logout">
+					Logout
+				</button>
+			</div>
+		</div>
+		{{/if}}
+	</body>
+</html>
+</template>

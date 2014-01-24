@@ -1,0 +1,45 @@
+<template name="home">
+	<div class="global_header">
+		<h1>Big Red Idea</h1>
+	</div>
+
+	<button type="button" class="btn btn-success" id="new_idea">
+		<i class="glyphicon glyphicon-plus-sign"></i>
+		New Idea
+	</button>
+
+	<div class="list-group">
+		<div class="list-group-item" id="new_idea_form" style="display:none">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="new_idea_summary" class="col-sm-2 control-label">Summary</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="new_idea_summary" placeholder="Reality-bending summary" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="new_idea_description" class="col-sm-2 control-label">Description</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" id="new_idea_description"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12 col-xs-offset-2">
+						<button type="submit" class="btn btn-primary">
+							Add This Idea
+						</button>
+						<button type="button" class="btn btn-default" id="new_idea_cancel">
+							Never mind
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	{{#each ideas}}
+		<a href="#" class="list-group-item">
+			<h4 class="list-group-item-heading">{{summary}} <small class="pull-right">{{author_name}} - {{created_moment}}</small></h4>
+			<p class="list-group-item-text">{{description}}</p>
+		</a>
+	{{/each}}
+	</div>
+</template>
