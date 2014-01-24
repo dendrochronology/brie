@@ -6,6 +6,10 @@ HomeController = AppController.extend({
 	},
 
 	data: function() {
-		return {ideas: Ideas.find({}, {sort: {created_date: -1}})};
+		return {ideas:
+			Ideas.find({}, {
+				sort: {created_date: -1}
+			}).fetch()
+		};
 	}
 });

@@ -1,3 +1,11 @@
+Template.home.rendered = function() {
+	var data = Router.getData() || {ideas:[]};
+	if (data.ideas.length === 0) {
+		Template.home.show_new_form();
+	}
+	console.log(data.ideas);
+};
+
 Template.home.show_new_form = function() {
 	$("#new_idea_form").show(150);
 	$("#new_idea").hide(150);
