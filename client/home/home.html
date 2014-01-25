@@ -37,10 +37,12 @@
 		</div>
 
 	{{#each ideas}}
+		{{#isolate}}
 		<a href="#" class="list-group-item">
 			<h4 class="list-group-item-heading">{{summary}} <small class="pull-right">{{author_name}} - {{created_moment}}</small></h4>
 			<p class="list-group-item-text">{{description}}</p>
 		</a>
+		{{/isolate}}
 	{{/each}}
 	</div>
 </template>
